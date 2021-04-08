@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon Web Solutions | Create Digital Masterpieces</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="added_styles.css">
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
+    <script src="app.js" defer></script>
+</head>
+<body class="font-base min-h-screen h-full relative overflow-hidden w-screen">
+<!-- loader -->
+    <div class="z-40 fixed top-0 left-0 w-screen h-screen loader bg-white flex items-center justify-center flex-col transform transition-all">
+        <img src="/assets/favicon.svg" alt="logo" class="h-20 w-20 animate-bounce">
+        <small class="mt-4 uppercase tracking-widest text-gray-500">loading</small>
+    </div>
+<!-- navbar -->
+    <nav class="flex w-full max-w-7xl mx-auto items-center justify-between h-16 px-4">
+        <figure class="flex items-center justify-center">
+            <img src="/assets/favicon.svg" class="block w-8 h-8 md:h-10 md:w-10 object-cover animate-pulse hover:scale-110 transform transition-all cursor-pointer">
+        </figure>
+        <ul class="hidden md:flex flex-1 justify-center items-center">
+            <li class="mx-4 relative uppercase text-sm font-semibold text-gray-400 hover:text-gray-500 hover:scale-x-110 transform transition-all">
+                <a href="#project">
+                    projects
+                </a>
+            </li>
+            <li class="mx-4 relative uppercase text-sm font-semibold text-gray-400 hover:text-gray-500 hover:scale-x-110 transform transition-all">
+                <a href="#service">
+                    services
+                </a>
+            </li>
+            <li class="mx-4 relative uppercase text-sm font-semibold text-gray-400 hover:text-gray-500 hover:scale-x-110 transform transition-all">
+                <a href="#contact">
+                    contact
+                </a>
+            </li>
+        </ul>
+        <div class="relative w-36 group">
+            <div class="z-0 absolute top-1/2 transform -translate-y-1/2 left-0 block h-8 w-8 rounded-full bg-gray-200 group-hover:w-full transition-all duration-300"></div>
+            <a href="/" 
+            class="z-10 absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 capitalize text-sm w-max outline-none focus:outline-none cursor-pointer group-hover:text-gray-700 text-gray-400 font-semibold">
+                start a project
+            </a>
+        </div>    
+    </nav>
+<!-- header  -->
+    <header class="p-8 max-h-screen mt-10 w-full max-w-7xl mx-auto flex flex-col items-start justify-center">
+        <section class="w-full max-w-xl mx-auto flex items-start justify-center lg:mr-auto lg:mx-0 lg:my-9 lg:px-6">
+            <span id="time" class="text-sm mt-2 font-semibold md:text-lg text-gray-500 w-1/5"></span>
+            <h1 class="text-5xl w-4/5 max-w-md grid text-right md:text-6xl lg:text-9xl">
+                <div class="uppercase font-bold w-full lg:font-extrabold">
+                    <span class="inline-block bg-gradient-to-l from-gray-400 to-gray-800 text-transparent bg-clip-text mx-auto">
+                        polygon
+                    </span> 
+                    <span class="inline-block bg-gradient-to-l from-gray-400 to-gray-800 text-transparent bg-clip-text mr-auto">
+                        web
+                    </span>
+                    <span class="inline-block bg-gradient-to-r from-gray-400 to-gray-800 text-transparent bg-clip-text mx-auto">
+                        solutions
+                    </span>
+                    <span id="location" class="stroke transition-all my-4 inline-block uppercase font-bold text-transparent mr-auto">
+                        london
+                    </span>
+                </div>
+            </h1>
+        </section>
+    </header>
+<!-- main -->
+    <main id="project">
+        <section class="md:h-screen p-4">
+            <div
+            class="card grid grid-rows-6 h-3/4 my-4 md:h-full max-w-5xl w-5/6 mr-auto group p-2 overflow-hidden" >
+            <article class="relative row-start-1 row-end-6">
+                <figure class="card__img-box bg-gray-50 p-1 h-full w-full overflow-hidden rounded-md">
+                    <img src="/assets/back_1.jpg" class="card__img card__img--back">
+                    <img src="/assets/front_1.jpg" class="card__img card__img--front">
+                </figure>
+                <small class="z-20 absolute -top-2 -left-2 px-3 py-1.5 rounded shadow-lg text-xs bg-gray-600 text-gray-50 uppercase origin-bottom transition-all transform delay-300 group-hover:scale-0">symbion</small>
+                <p class="pointer-events-none text-xs md:text-sm xl:text-lg absolute z-20 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-700 delay-700 bg-white text-gray-700 p-4 capitalize bg-opacity-80 w-4/5 max-w-md text-center transition-all opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105 origin-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi facilis libero eum deleniti non tempora molestiae voluptatibus veniam corrupti eos officiis tempore porro temporibus, officia esse debitis quod repellendus!
+                </p>
+            </article>
+            <h3 class="row-start-6 row-end-auto py-1 font-semibold text-gray-400">
+                <a href="/public/project.html?id=1" class="outline-none group-hover:text-gray-600 transition-all ease-in-out origin-center lg:text-lg focus:outline-none inline hover:border-current border-b-2 border-transparent">
+                    iOS App and landing page for education platform
+                </a>
+            </h3>
+            </div>
+        </section>
+        <section class="md:h-screen p-4">
+            <div
+            class="card grid grid-rows-6 h-3/4 my-4 md:h-full max-w-5xl w-5/6 ml-auto group p-2 overflow-hidden" >
+            <article class="relative row-start-1 row-end-6">
+                <figure class="card__img-box bg-gray-50 p-1 h-full w-full overflow-hidden rounded-md">
+                    <img src="/assets/back_2.jpg" class="card__img card__img--back">
+                    <img src="/assets/front_2.jpg" class="card__img card__img--front">
+                </figure>
+                <small class="z-20 absolute -top-2 -right-2 px-3 py-1.5 rounded shadow-lg text-xs bg-gray-600 text-gray-50 uppercase origin-bottom transition-all transform delay-300 group-hover:scale-0">alexandra gomez</small>
+                <p class="pointer-events-none text-xs md:text-sm xl:text-lg absolute z-20 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-700 delay-700 bg-white text-gray-700 p-4 capitalize bg-opacity-80 w-4/5 max-w-md text-center transition-all opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105 origin-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi facilis libero eum deleniti non tempora molestiae voluptatibus veniam corrupti eos officiis tempore porro temporibus, officia esse debitis quod repellendus!
+                </p>
+            </article>
+            <h3 class="row-start-6 row-end-auto py-1 font-semibold text-gray-400">
+                <a href="/public/project.html?id=1" class="outline-none group-hover:text-gray-600 transition-all ease-in-out origin-center lg:text-lg focus:outline-none inline hover:border-current border-b-2 border-transparent">
+                    iOS App and landing page for education platform
+                </a>
+            </h3>
+            </div>
+        </section>
+        <section class="md:h-screen p-4">
+            <div
+            class="card grid grid-rows-6 h-3/4 my-4 md:h-full max-w-5xl w-5/6 mr-auto group p-2 overflow-hidden" >
+            <article class="relative row-start-1 row-end-6">
+                <figure class="card__img-box bg-gray-50 p-1 h-full w-full overflow-hidden rounded-md">
+                    <img src="/assets/back_3.jpg" class="card__img card__img--back">
+                    <img src="/assets/front_3.jpg" class="card__img card__img--front">
+                </figure>
+                <small class="z-20 absolute -top-2 -left-2 px-3 py-1.5 rounded shadow-lg text-xs bg-gray-600 text-gray-50 uppercase origin-bottom transition-all transform delay-300 group-hover:scale-0">codebuddy bootcamp</small>
+                <p class="pointer-events-none text-xs md:text-sm xl:text-lg absolute z-20 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-700 delay-700 bg-white text-gray-700 p-4 capitalize bg-opacity-80 w-4/5 max-w-md text-center transition-all opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105 origin-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi facilis libero eum deleniti non tempora molestiae voluptatibus veniam corrupti eos officiis tempore porro temporibus, officia esse debitis quod repellendus!
+                </p>
+            </article>
+            <h3 class="row-start-6 row-end-auto py-1 font-semibold text-gray-400">
+                <a href="/public/project.html?id=1" class="outline-none group-hover:text-gray-600 transition-all ease-in-out origin-center lg:text-lg focus:outline-none inline hover:border-current border-b-2 border-transparent">
+                    iOS App and landing page for education platform
+                </a>
+            </h3>
+            </div>
+        </section>
+        <section class="cardMore p-4">
+            <div
+            class="card grid grid-rows-6 h-3/4 my-4 md:h-full max-w-5xl w-5/6 ml-auto group p-2 overflow-hidden" >
+            <article class="relative row-start-1 row-end-6">
+                <figure class="card__img-box bg-gray-50 p-1 h-full w-full overflow-hidden rounded-md">
+                    <img src="/assets/back_4.jpg" class="card__img card__img--back">
+                    <img src="/assets/front_4.jpg" class="card__img card__img--front">
+                </figure>
+                <small class="z-20 absolute -top-2 -right-2 px-3 py-1.5 rounded shadow-lg text-xs bg-gray-600 text-gray-50 uppercase origin-bottom transition-all transform delay-300 group-hover:scale-0">blackfit</small>
+                <p class="pointer-events-none text-xs md:text-sm xl:text-lg absolute z-20 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-700 delay-700 bg-white text-gray-700 p-4 capitalize bg-opacity-80 w-4/5 max-w-md text-center transition-all opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105 origin-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi facilis libero eum deleniti non tempora molestiae voluptatibus veniam corrupti eos officiis tempore porro temporibus, officia esse debitis quod repellendus!
+                </p>
+            </article>
+            <h3 class="row-start-6 row-end-auto py-1 font-semibold text-gray-400">
+                <a href="/public/project.html?id=1" class="outline-none group-hover:text-gray-600 transition-all ease-in-out origin-center lg:text-lg focus:outline-none inline hover:border-current border-b-2 border-transparent">
+                    iOS App and landing page for education platform
+                </a>
+            </h3>
+            </div>
+        </section>
+        <section class="cardMore p-4">
+            <div
+            class="card grid grid-rows-6 h-3/4 my-4 md:h-full max-w-5xl w-5/6 mr-auto group p-2 overflow-hidden" >
+            <article class="relative row-start-1 row-end-6">
+                <figure class="card__img-box bg-gray-50 p-1 h-full w-full overflow-hidden rounded-md">
+                    <img src="/assets/back_5.jpg" class="card__img card__img--back">
+                    <img src="/assets/front_5.jpg" class="card__img card__img--front">
+                </figure>
+                <small class="z-20 absolute -top-2 -left-2 px-3 py-1.5 rounded shadow-lg text-xs bg-gray-600 text-gray-50 uppercase origin-bottom transition-all transform delay-300 group-hover:scale-0">dynamo</small>
+                <p class="pointer-events-none text-xs md:text-sm xl:text-lg absolute z-20 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-700 delay-700 bg-white text-gray-700 p-4 capitalize bg-opacity-80 w-4/5 max-w-md text-center transition-all opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105 origin-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi facilis libero eum deleniti non tempora molestiae voluptatibus veniam corrupti eos officiis tempore porro temporibus, officia esse debitis quod repellendus!
+                </p>
+            </article>
+            <h3 class="row-start-6 row-end-auto py-1 font-semibold text-gray-400">
+                <a href="/public/project.html?id=1" class="outline-none group-hover:text-gray-600 transition-all ease-in-out origin-center lg:text-lg focus:outline-none inline hover:border-current border-b-2 border-transparent">
+                    iOS App and landing page for education platform
+                </a>
+            </h3>
+            </div>
+        </section>
+        <section class="cardMore p-4">
+            <div
+            class="card grid grid-rows-6 h-3/4 my-4 md:h-full max-w-5xl w-5/6 ml-auto group p-2 overflow-hidden" >
+            <article class="relative row-start-1 row-end-6">
+                <figure class="card__img-box bg-gray-50 p-1 h-full w-full overflow-hidden rounded-md">
+                    <img src="/assets/back_6.jpg" class="card__img card__img--back">
+                    <img src="/assets/front_6.jpg" class="card__img card__img--front">
+                </figure>
+                <small class="z-20 absolute -top-2 -right-2 px-3 py-1.5 rounded shadow-lg text-xs bg-gray-600 text-gray-50 uppercase origin-bottom transition-all transform delay-300 group-hover:scale-0">hess skincare</small>
+                <p class="pointer-events-none text-xs md:text-sm xl:text-lg absolute z-20 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-700 delay-700 bg-white text-gray-700 p-4 capitalize bg-opacity-80 w-4/5 max-w-md text-center transition-all opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105 origin-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi facilis libero eum deleniti non tempora molestiae voluptatibus veniam corrupti eos officiis tempore porro temporibus, officia esse debitis quod repellendus!
+                </p>
+            </article>
+            <h3 class="row-start-6 row-end-auto py-1 font-semibold text-gray-400">
+                <a href="/public/project.html?id=1" class="outline-none group-hover:text-gray-600 transition-all ease-in-out origin-center lg:text-lg focus:outline-none inline hover:border-current border-b-2 border-transparent">
+                    iOS App and landing page for education platform
+                </a>
+            </h3>
+            </div>
+
+        </section>
+        
+    </main>
+<!-- toggler button box -->
+    <div class="flex items-center justify-center showMore">
+        <button onclick="toggleThumbnailVisibility()" class="flex items-center justify-center border-gray-400 border rounded-full p-20 outline-none focus:outline-none relative group overflow-hidden">
+            <div class="absolute top-0 left-0 h-full w-full transition-all origin-center duration-300 bg-black transform scale-0 group-hover:scale-100 rounded-full"></div>
+            <svg class="w-4 h-4 z-10 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+            <span class="z-10 text-sm group-hover:text-white">3</span>
+        </button>
+    </div>
+<!-- about section -->
+    <section class="w-5/6 mx-auto max-w-6xl min-h-screen flex justify-center items-center">
+        <div class="w-full flex items-start justify-between">
+            <span class="text-gray-500 w-1/3 mt-2 tracking-tighter block text-sm font-semibold lg:w-1/4">
+                About us
+            </span>
+            <p class="text-4xl w-2/3 mr-auto tracking-tighter font-semibold text-gray-700 lg:w-3/4 lg:text-6xl">
+                We help businesses to re-evaluate their digital potential and achieve greater results. Corporate level companies trust us to refresh and improve their brands online. Start-ups – to launch and set a visual tone.
+            </p>
+        </div>
+    </section>
+<!-- services section -->
+    <section id="service" class="w-5/6 mx-auto max-w-6xl min-h-screen flex flex-col justify-center items-center">
+        <ul class="w-full flex items-center justify-between max-w-7xl mr-auto my-6">
+            <li class="relative w-16 h-16 md:w-28 md:h-28 brandIcon">
+                <img 
+                    src="/assets/icons/1.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-100">
+                <img 
+                    src="/assets/icons/2.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-0">
+            </li>
+            <li class="relative w-16 h-16 md:w-28 md:h-28 brandIcon">
+                <img 
+                    src="/assets/icons/3.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-100">
+                <img 
+                    src="/assets/icons/4.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-0">
+            </li>
+            <li class="relative w-16 h-16 md:w-28 md:h-28 brandIcon">
+                <img 
+                    src="/assets/icons/5.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-100">
+                <img 
+                    src="/assets/icons/6.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-0">
+            </li>
+            <li class="relative w-16 h-16 md:w-28 md:h-28 brandIcon">
+                <img 
+                    src="/assets/icons/7.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-100">
+                <img 
+                    src="/assets/icons/8.svg" 
+                    class="w-full h-full object-cover absolute top-0 left-0 transition-all transform scale-0">
+            </li>
+        </ul>
+        <div class="w-full flex items-start justify-between">
+            <span class="text-gray-500 w-1/3 mt-2 tracking-tighter block text-sm font-semibold lg:w-1/4">
+                    Services
+            </span>
+            <div class="w-2/3 mr-auto lg:w-3/4">
+                <p class="text-4xl tracking-tighter font-semibold text-gray-700 lg:text-6xl">
+                    We know it is quite challenging to find a good team to do great things. But we managed to do it.
+                </p>
+                <section class="w-full max-w-md my-10 mr-auto text-gray-600 text-sm xl:text-lg">
+                    <div class="my-2 w-full max-w-md flex justify-between items-center">
+                        <strong>Web Design</strong>
+                        <span>Copywriting</span>
+                    </div>
+                    <div class="my-2 w-full flex justify-between items-center">
+                        <strong>iOS Design</strong>
+                        <span>Animation</span>
+                    </div>
+                    <div class="my-2 w-full flex justify-between items-center">
+                        <strong>User Experience</strong>
+                        <span>Iconography</span>
+                    </div>
+                    <div class="my-2 w-full flex justify-between items-center">
+                        <strong>Branding</strong>
+                        <span>2D/3D grahics</span>
+                    </div>
+                    <div class="my-2 w-full flex justify-between items-center">
+                        <strong>Digital Strategy</strong>
+                        <span>HTML/CSS/JS</span>
+                    </div>
+                    <div class="my-2 w-full flex justify-between items-center">
+                        <strong>Development</strong>
+                        <span>Backend/API</span>
+                    </div>
+                    <div class="my-2 w-full flex justify-between items-center">
+                        <strong>Integrations</strong>
+                        <span>WordPress</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+<!-- marquee -->
+    <section class="overflow-hidden h-60 flex items-center justify-center pointer-events-none">
+        <h4 class="marquee text-9xl text-black uppercase font-bold">
+            <div>
+                <span>awwwwards</span>
+                <span class="stroke text-transparent">x7</span>
+            </div>
+            <div>
+                <span>behance</span>
+                <span class="stroke text-transparent">x17</span>
+            </div>
+            <div>
+                <span>dribbble</span>
+                <span class="stroke text-transparent">x6</span>
+            </div>
+            <div>
+                <span>css design awards</span>
+                <span class="stroke text-transparent">x4</span>
+            </div>
+        </h4>
+    </section>
+
+<!-- footer -->
+<footer class="min-h-screen w-full bg-gray-800 px-6 py-10 flex flex-col">
+    <section class="w-full mx-auto max-w-6xl h-screen flex flex-col">
+        <div class="w-5/6 flex items-start justify-between md:justify-start max-w-2xl mr-auto">
+            <span class="text-gray-50 w-1/3 mt-2 tracking-tighter block text-sm font-semibold lg:w-1/4">
+                Contact
+            </span>
+            <h3 class="text-6xl w-2/3 max-w-sm mr-auto tracking-tighter font-semibold text-gray-700 lg:w-3/4 md:text-7xl lg:text-9xl">
+                <div class="uppercase font-bold w-full lg:font-extrabold">
+                    <span class="block text-gray-50 my-2 text-center">
+                        send
+                    </span> 
+                    <span class="block text-gray-50 my-2 text-left">
+                        your
+                    </span>
+                    <span class="block text-gray-50 my-2 text-right">
+                        request
+                    </span>
+                </div>
+            </h3>
+        </div>
+        <article class="relative my-6 w-full max-w-2xl mx-auto">
+            <input 
+                type="text" 
+                name="msg" 
+                id="msg"
+                autocomplete="off"
+                class="footer-input bg-transparent text-gray-400 border-b-2 py-2 w-full  outline-none focus:outline-none border-current text-2xl font-bold focus:text-white focus:border-white">
+            <label for="msg" class="absolute font-bold text-2xl tracking-wider top-2 pointer-events-none left-0 block stroke--white capitalize text-transparent">name</label>
+            <button type="button" class="absolute top-2 right-2  text-gray-400 outline-none focus:outline-none transform transition-all h-10 w-10 origin-left group overflow-hidden">
+                <img src="/assets/arrow.svg" class="h-full w-full absolute top-0 left-0 z-10 group-hover:scale-x-0 transform origin-right transition-all">
+                <img src="/assets/arrow-fill.svg" class="h-full w-full absolute top-0 left-0 transform scale-x-0 group-hover:scale-x-100 origin-left transition-all">
+            </button>
+        </article>
+
+        <div class="flex flex-wrap items-center justify-center mx-auto md:my-10">
+            <article class="flex flex-col items-center text-white m-6">
+                <img src="/assets/memoji/1.gif" class="h-20 w-20 object-cover p-1 border-2 mb-4 border-current rounded-full">
+                <strong class="text-sm capitalize font-semibold">Jeniffer B</strong>
+                <small class="text-xs capitalize">
+                    new york, united states
+                </small>
+                <small class="text-xs capitalize">
+                    newyork@polygon.shape
+                </small>
+            </article>
+            <article class="flex flex-col items-center text-white m-6">
+                <img src="/assets/memoji/2.gif" class="h-20 w-20 object-cover p-1 border-2 mb-4 border-current rounded-full">
+                <strong class="text-sm capitalize font-semibold">Bridgette Swann</strong>
+                <small class="text-xs capitalize">
+                    london, united kingdom
+                </small>
+                <small class="text-xs capitalize">
+                    london@polygon.shape
+                </small>
+            </article>
+            <article class="flex flex-col items-center text-white m-6">
+                <img src="/assets/memoji/3.gif" class="h-20 w-20 object-cover p-1 border-2 mb-4 border-current rounded-full">
+                <strong class="text-sm capitalize font-semibold">Ava Hammerschmidt</strong>
+                <small class="text-xs capitalize">
+                    berlin, germany
+                </small>
+                <small class="text-xs capitalize">
+                    berlink@polygon.shape
+                </small>
+            </article>
+        </div>
+    </section>
+    <small class="text-xs text-gray-300 block text-center capitalize mt-4">
+        copyright &copy; polygon
+    </small>
+</footer>
+</body>
+</html>

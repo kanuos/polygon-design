@@ -1,0 +1,16 @@
+{
+  "name": "circle_clone",
+  "version": "1.0.0",
+  "description": "Clone of www.circle.sx.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwind build ./tailwind.css -o ./public/style.css"
+  },
+  "keywords": ["awwwwards", "clone"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "tailwindcss": "^2.0.4"
+  }
+}
