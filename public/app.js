@@ -1,3 +1,9 @@
+let projectID;
+const projectDetail = document.getElementById("project__detail");
+const projectDetailTitle = document.getElementById("project__detail__title");
+const projectDetailCaption = document.getElementById("project__detail__caption");
+const projectDetailFront = document.querySelector(".project__detail__front");
+const projectDetailBack = document.querySelector(".project__detail__back");
 const loader = document.querySelector(".loader");
 const time = document.querySelector("#time");
 const locationEl = document.querySelector("#location");
@@ -105,19 +111,12 @@ footerInput.addEventListener("keyup", () => {
 
 
 // when the project is clicked
-let projectID;
-const projectDetail = document.getElementById("project__detail");
-const projectDetailTitle = document.getElementById("project__detail__title");
-const projectDetailCaption = document.getElementById("project__detail__caption");
-const projectDetailFront = document.querySelector(".project__detail__front");
-const projectDetailBack = document.querySelector(".project__detail__back");
 
 detailTogglers?.forEach(toggler => {
     toggler.addEventListener("click", e => {
         e.preventDefault();
         projectID = e.target.pathname.split("/")?.[e.target.pathname.split("/").length - 1] ?? 1
         const {title, caption, front, back} = articles[projectID - 1];
-        console.log(projectDetailBack, projectDetailFront);
         projectDetailBack.setAttribute("src", back);
         projectDetailFront.setAttribute("src", front);
         projectDetailTitle.textContent = title
