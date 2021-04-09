@@ -13,6 +13,10 @@ const hiddenThumbnails = document.querySelectorAll(".cardMore");
 const showMore = document.querySelector(".showMore");
 const brandIcons = document.querySelectorAll(".brandIcon");
 const detailTogglers = document.querySelectorAll(".detailToggler");
+const footerInput = document.querySelector("#msg");
+const label = document.querySelector(" label[for='msg']");
+const paragraphs = document.querySelectorAll(".appearingText");
+const modalGroup = document.querySelectorAll(".modalGroup");
 
 let articles = [];
 
@@ -97,9 +101,6 @@ function animateIcons() {
 
 
 // show placeholder only when input is empty
-const footerInput = document.querySelector("#msg");
-const label = document.querySelector(" label[for='msg']");
-
 footerInput.addEventListener("keyup", () => {
     const {value} = footerInput;
     if (value.length) {
@@ -163,3 +164,41 @@ window.addEventListener("load", () => {
 })
 
 
+// animations
+
+const articleObserver = new IntersectionObserver(
+    (entries, articleObserver) => {
+        entries.forEach(entry => {
+            entry.target.style.transition = "all .5s ease";
+            if (entry.isIntersecting){
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "scale(1)";
+                return 
+            } 
+            entry.target.style.opacity = 0.25;
+            entry.target.style.transform = "scale(.5)";
+        })
+    },
+{
+    threshold : .5,
+    rootMargin : "0px 0px 200px 0px"
+})
+
+const paragraphObserver = new IntersectionObserver(entries=> {
+    entries.forEach(entry => {
+        entry.target.style.transition = "all .5s ease-out"
+        if (entry.isIntersecting){
+            entry.target.style.transform = "scale(1) translateX(0)";
+            return
+        }
+        entry.target.style.transform = "scale(0) translateX(100%)";
+    })
+}, 
+{
+    threshold : 0.75,
+})
+
+
+paragraphs.forEach(paragraph => paragraphObserver.observe(paragraph))
+allArticles.forEach(article => articleObserver.observe(article))
+modalGroup.forEach(article => articleObserver.observe(article))
