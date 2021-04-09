@@ -2,10 +2,13 @@ const loader = document.querySelector(".loader");
 const time = document.querySelector("#time");
 const locationEl = document.querySelector("#location");
 const LOCATIONS = ["new york", "london", "berlin", "paris"]
+const allArticles = document.querySelectorAll(".card");
 const hiddenThumbnails = document.querySelectorAll(".cardMore");
 const showMore = document.querySelector(".showMore");
 const brandIcons = document.querySelectorAll(".brandIcon");
+const detailTogglers = document.querySelectorAll(".detailToggler");
 
+let articles = [];
 
 // update the timer element on DOM with the current time. Updates every second
 function updateTimer(){
@@ -101,9 +104,47 @@ footerInput.addEventListener("keyup", () => {
 })
 
 
+// when the project is clicked
+let projectID;
+const projectDetail = document.getElementById("project__detail");
+const projectDetailTitle = document.getElementById("project__detail__title");
+const projectDetailCaption = document.getElementById("project__detail__caption");
+const projectDetailFront = document.querySelector(".project__detail__front");
+const projectDetailBack = document.querySelector(".project__detail__back");
 
+detailTogglers?.forEach(toggler => {
+    toggler.addEventListener("click", e => {
+        e.preventDefault();
+        projectID = e.target.pathname.split("/")?.[e.target.pathname.split("/").length - 1] ?? 1
+        const {title, caption, front, back} = articles[projectID - 1];
+        console.log(projectDetailBack, projectDetailFront);
+        projectDetailBack.setAttribute("src", back);
+        projectDetailFront.setAttribute("src", front);
+        projectDetailTitle.textContent = title
+        projectDetailCaption.textContent = caption
+        hideDetail()    // toggle effect
+        projectDetail.scrollTo(0,0)
+    })
 
+})
 
+function grabProjectDetail(){
+    allArticles.forEach(el => {
+        const [article, h3] = el.children
+        const project = {
+            front : article.firstElementChild.children[1].getAttribute("src"),
+            back : article.firstElementChild.children[0].getAttribute("src"),
+            title : article.children[1].textContent,
+            caption : h3.textContent.trim()
+        }
+        articles.push(project)
+    })
+}
+
+function hideDetail() {
+    projectDetail?.classList.toggle("scale-100")
+    projectDetail?.classList.toggle("scale-0")
+}
 
 
 
@@ -111,6 +152,7 @@ footerInput.addEventListener("keyup", () => {
 // functions that run when the page loads
 window.addEventListener("load", () => {
     const p =new Promise((resolve, reject) => {
+        grabProjectDetail()
         updateTimer();
         changeLocaiton();
         animateIcons();

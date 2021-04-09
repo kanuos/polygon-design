@@ -32249,6 +32249,148 @@ video {
           animation: bounce 1s infinite;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* navigation links start */
+
+nav > ul li::after {
+  height: 1.5px;
+  bottom: -2px;
+  position: absolute;
+  content: '';
+  width: 100%;
+  background: currentColor;
+  left: 0;
+  transition: all .4s cubic-bezier(0.23, 1, 0.320, 1);
+  transition-delay: .2s;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+nav > ul li:hover::after {
+  transform: scale(1);
+}
+
+/* navigation links end */
+
+.stroke {
+  -webkit-text-stroke: 1.5px black;
+}
+
+.stroke--white {
+  -webkit-text-stroke: 1px lightgray;
+}
+
+/* the images effect */
+
+.card__img {
+  position: absolute;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all .5s ease;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card__img--front{
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: grayscale(100%);
+  transition: all .7s ease;
+  transform-origin: top left;
+}
+
+.card__img--back{
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  filter: grayscale(100%);
+  transform: scale(0);
+  transform-origin: bottom right;
+}
+
+.card:hover .card__img-box .card__img--front {
+  filter: grayscale(0%);
+  transform: scale(.25);
+}
+
+.card:hover .card__img-box .card__img--back {
+  transform: scale(1);
+  filter: grayscale(0%);
+  transition: transform .5s ease-out .3s, filter .8s linear .8s;
+}
+
+.cardMore {
+  display: none;
+}
+
+.brandIcon >img {
+  filter: grayscale(100%) opacity(.5);
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.marquee div{
+  padding-left: 100%;
+  display: inline-block;
+  left: 100vw;
+  -webkit-animation: marquee 20s linear infinite;
+          animation: marquee 20s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-1500vw);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-1500vw);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .marquee div{
+    -webkit-animation: marquee 30s linear infinite;
+            animation: marquee 30s linear infinite;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .marquee div{
+    -webkit-animation: marquee 40s linear infinite;
+            animation: marquee 40s linear infinite;
+  }
+}
+
+input:focus + .stroke--white {
+  -webkit-text-stroke: 1px white;
+}
+
+input ~ button {
+  background: white;
+  filter: invert(100%);
+  transition: filter .4s ease;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -190353,3 +190495,4 @@ video {
             animation: bounce 1s infinite;
   }
 }
+
